@@ -20,7 +20,7 @@ var readStream = require( 'flow-read' );
 // Create a new stream, passing along an optional error handler:
 var stream = readStream()
 	.path( __dirname + '/path/to/file.json' )
-	.stream( onFinish );
+	.stream( onError );
 
 // Pipe the stream:
 stream.pipe( process.stdout );
