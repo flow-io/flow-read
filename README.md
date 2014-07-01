@@ -17,13 +17,22 @@ $ npm install flow-read
 // File read stream generator:
 var readStream = require( 'flow-read' );
 
-// Create a new stream:
+// Create a new stream, passing along an optional error handler:
 var stream = readStream()
 	.path( __dirname + '/path/to/file.json' )
-	.stream();
+	.stream( onFinish );
 
 // Pipe the stream:
 stream.pipe( process.stdout );
+
+// Error handler:
+function onError( error ) {
+	if ( error ) {
+		console.error( error.stack );
+		throw new Error( 'Error!!!' );
+	}
+	console.log( 'Finished!' );
+}
 ```
 
 ## Tests
