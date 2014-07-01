@@ -1,7 +1,7 @@
 flow-read
 =========
 
-Thin wrapper for [graceful-fs]() file read stream.
+Thin wrapper for [graceful-fs](https://github.com/isaacs/node-graceful-fs) file read stream.
 
 
 ## Installation
