@@ -1,0 +1,47 @@
+{
+  "name": "flow-read",
+  "version": "0.0.0",
+  "description": "Thin wrapper for graceful-fs file read stream.",
+  "author": {
+    "name": "Athan Reines",
+    "email": "athan@nodeprime.com"
+  },
+  "contributors": [
+    {
+      "name": "Athan Reines",
+      "email": "athan@nodeprime.com"
+    }
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kgryte/flow-read.git"
+  },
+  "keywords": [
+    "stream",
+    "readable",
+    "graceful-js",
+    "flow",
+    "flow.io"
+  ],
+  "bugs": {
+    "url": "https://github.com/kgryte/flow-read/issues"
+  },
+  "dependencies": {
+    "graceful-fs": "~3.0.2"
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "1.x.x",
+    "stream-spec": "~0.3.5"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ]
+}
