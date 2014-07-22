@@ -18,7 +18,7 @@
   "main": "./lib",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kgryte/flow-read.git"
+    "url": "git://github.com/flow-io/flow-read.git"
   },
   "keywords": [
     "stream",
@@ -28,7 +28,7 @@
     "flow.io"
   ],
   "bugs": {
-    "url": "https://github.com/kgryte/flow-read/issues"
+    "url": "https://github.com/flow-io/flow-read/issues"
   },
   "dependencies": {
     "graceful-fs": "~3.0.2"
