@@ -15,23 +15,24 @@ $ npm install flow-read
 To create a readStream factory,
 
 ``` javascript
-var readStream = flow.read();
+var readStream = require( 'flow-read' ),
+	rStream = readStream();
 ```
 
-### readStream.path( [filepath] )
+### rStream.path( [filepath] )
 
 This method is a setter/getter. If no `filepath` is provided, returns the `filepath`. You configure the stream factory by specifying a `filepath`:
 
 ``` javascript
-readStream.path( 'path/to/file' );
+rStream.path( 'path/to/file' );
 ```
 
-### readStream.stream( [clbk] )
+### rStream.stream( [clbk] )
 
 Provided a `filepath` has been specified, to create a new readStream:
 
 ``` javascript
-var stream = readStream.stream( clbk );
+var stream = rStream.stream( clbk );
 ```
 
 Where the optional `clbk` is invoked upon stream `end` and has an `error` as its first argument. If no read errors, `error` is `null`.
@@ -42,7 +43,7 @@ Where the optional `clbk` is invoked upon stream `end` and has an `error` as its
 Methods are chainable:
 
 ``` javascript
-flow.read()
+readStream()
 	.path( 'path/to/file' )
 	.stream( clbk )
 	.pipe( process.stdout );
