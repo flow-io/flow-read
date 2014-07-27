@@ -10,6 +10,44 @@ Thin wrapper for [graceful-fs](https://github.com/isaacs/node-graceful-fs) file 
 $ npm install flow-read
 ```
 
+## API
+
+To create a readStream factory,
+
+``` javascript
+var readStream = flow.read();
+```
+
+### readStream.path( filepath )
+
+This method is a setter/getter. If no filepath is provided, returns the filepath. You configure the stream factory by specifying a filepath:
+
+``` javascript
+readStream.path( 'path/to/file' );
+```
+
+### readStream.stream( [clbk] )
+
+Provided a filepath has been specified, to create a new readStream:
+
+``` javascript
+var stream = readStream.stream( clbk );
+```
+
+Where the optional `clbk` is invoked upon stream `end` and has an `error` as its first argument. If no read errors, `error` is `null`.
+
+
+## Usage
+
+Methods are chainable:
+
+``` javascript
+flow.read()
+	.path( 'path/to/file' )
+	.stream( clbk )
+	.pipe( process.stdout );
+``` 
+
 
 ## Examples
 
