@@ -18,9 +18,9 @@ To create a readStream factory,
 var readStream = flow.read();
 ```
 
-### readStream.path( filepath )
+### readStream.path( [filepath] )
 
-This method is a setter/getter. If no filepath is provided, returns the filepath. You configure the stream factory by specifying a filepath:
+This method is a setter/getter. If no `filepath` is provided, returns the `filepath`. You configure the stream factory by specifying a `filepath`:
 
 ``` javascript
 readStream.path( 'path/to/file' );
