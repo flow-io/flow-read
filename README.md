@@ -28,7 +28,7 @@ readStream.path( 'path/to/file' );
 
 ### readStream.stream( [clbk] )
 
-Provided a filepath has been specified, to create a new readStream:
+Provided a `filepath` has been specified, to create a new readStream:
 
 ``` javascript
 var stream = readStream.stream( clbk );
